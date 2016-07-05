@@ -1,0 +1,37 @@
+extends layout
+
+block content
+	h1.text-center Register
+	p.text-center Please register using the form below.
+	
+
+	main.container
+		.row
+			.col-md-8.col-md-offset-2
+			
+				ul.errors.alert-danger
+					if errors
+						each error, i in errors
+							li #{error.msg}
+	
+				form(method= 'post', action='/users/register', entrtype = 'multipart/form-data')
+					.form-group
+						label Name
+						input.form-control(name='name', type='text', placeholder='Enter Name')
+					.form-group
+						label Email
+						input.form-control(name='email', type='email', placeholder='Enter Email')
+					.form-group
+						label UserName
+						input.form-control(name='username', type='text', placeholder='Enter UserName')
+					.form-group
+						label Password
+						input.form-control(name='password', type='password', placeholder='Enter Password')
+					.form-group
+						label Confirm Password
+						input.form-control(name='password2', type='password', placeholder='Confirm Password')
+					.form-group
+						label Profile Image
+						input.form-control(name='profileimage', type='file')
+					input.btn.btn-primary(name='submit', type='submit', value='Register')
+		

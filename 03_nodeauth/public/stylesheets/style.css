@@ -1,0 +1,26 @@
+html, body{
+	height: 100%;
+    margin: 0;
+}
+.well{
+  margin-bottom:0px;
+}
+main{
+	padding: 10px;
+    min-height: -webkit-calc(100% - 120px);     /* Chrome */
+    min-height: -moz-calc(100% - 120px);     /* Firefox */
+    min-height: calc(100% - 120px);     /* native */
+}
+
+footer{
+	position: relative;
+    clear:both;
+	margin-top:10px;
+	padding:10px;
+	background-color: rgba(3,3,3,0.3);
+	color:white;
+}
+
+.navbar{
+	border-radius: 0px;
+}

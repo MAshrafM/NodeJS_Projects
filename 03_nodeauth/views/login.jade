@@ -1,0 +1,19 @@
+extends layout
+
+block content
+	h1.text-center Login
+	p.text-center Please Login using the form below.
+	
+	main.container
+		.row
+			.col-md-8.col-md-offset-2
+	
+				form(method= 'post', action='/users/login')
+					.form-group
+						label Name
+						input.form-control(name='name', type='text')
+					.form-group
+						label Password
+						input.form-control(name='password', type='password')
+					input.btn.btn-primary(name='submit', type='submit', value='Login')
+		
