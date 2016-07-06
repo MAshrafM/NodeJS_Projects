@@ -22,15 +22,21 @@ html
           ul.nav.navbar-nav
             li(class=(title === 'Members') ? 'active' : '') 
               a(href="/") Members
-            li(class=(title === 'Register') ? 'active' : '') 
-              a(href="/users/register") Register
-            li(class=(title === 'Login') ? 'active' : '') 
-              a(href="/users/login") Log In
-          ul.nav.navbar-nav.navbar-right
-            li 
-              a(href="/users/logout") Logout
               
+            if !user
+                li(class=(title === 'Register') ? 'active' : '') 
+                  a(href="/users/register") Register
+                li(class=(title === 'Login') ? 'active' : '') 
+                  a(href="/users/login") Log In
+          if user
+              ul.nav.navbar-nav.navbar-right
+                li 
+                  a(href="/users/logout") Logout
+    
+    .msg.container
+      != messages()
     block content
+        
     
     footer
       p.text-center &copy; 2016 MAshraf
