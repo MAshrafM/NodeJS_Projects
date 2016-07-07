@@ -1,6 +1,6 @@
 {
   "name": "04_nodeblog",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
@@ -12,6 +12,14 @@
     "express": "~4.13.4",
     "jade": "~1.11.0",
     "morgan": "~1.7.0",
-    "serve-favicon": "~2.3.0"
+    "serve-favicon": "~2.3.0",
+	"mongodb": "*",
+	"monk": "*",
+	"connect-flash": "*",
+	"express-validator": "*",
+	"express-session": "*",
+	"express-messages": "*",
+	"multer": "*",
+	"moment": "*"
   }
 }

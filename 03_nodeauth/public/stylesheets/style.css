@@ -7,9 +7,9 @@ html, body{
 }
 main{
 	padding: 10px;
-    min-height: -webkit-calc(100% - 120px);     /* Chrome */
-    min-height: -moz-calc(100% - 120px);     /* Firefox */
-    min-height: calc(100% - 120px);     /* native */
+    min-height: -webkit-calc(100% - 130px);     /* Chrome */
+    min-height: -moz-calc(100% - 130px);     /* Firefox */
+    min-height: calc(100% - 130px);     /* native */
 }
 
 footer{
