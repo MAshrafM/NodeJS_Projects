@@ -1,39 +1,34 @@
 doctype html
 html
-	head
-		title NodeBlog
-		meta(charset="utf-8")
-		meta(http-equiv="X-UA-Compatible" content="IE=edge")
-		meta(name="viewport" content="width=device-width, initial-scale=1")
-		link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
-		link(rel='stylesheet', href='/stylesheets/style.css')
-	
-	body
-		nav.navbar.navbar-inverse
-			.container
-				.navbar-header
-					button.navbar-toggle.collapsed(type="button", data-toggle="collapse", data-target="#navbar", aria-expanded="false", aria-controls="navbar" )
-					span.sr-only Toggle navigation
-					span.icon-bar
-					span.icon-bar
-					span.icon-bar
-					a.navbar-brand(href="/") NodeBlog
-				#navbar.collapse.navbar-collapse
-					ul.nav.navbar-nav
-						li(class=(title === 'Catergories') ? 'active' : '') 
-							a(href="/") Categories
-						li(class=(title === 'Posts') ? 'active' : '') 
-							a(href="/") Posts
+  head
+    title NodeBlog
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    
+    body
+      .container
+        img.logo(src='/images/logo.png')
+        nav
+          ul
+            li 
+              a(href="/", class=(title === 'Home') ? 'active' : '') Home
+            li
+              a(href="/about", class=(title === 'About') ? 'active' : '') About
+            li
+              a(href="/posts/add", class=(title === 'Add Post') ? 'active' : '') Add Post
+            li
+              a(href="/categories/add", class=(title === 'Add Category') ? 'active' : '') Add Category 
+             
 
-		.msg.container
-		!= messages()
-		
-		main.container
-			block content
+        .msg
+          != messages()
+        
+        main
+          block content
 
-		footer
-			p.text-center &copy; 2016 MAshraf
+      footer
+        p.text-center Copyright &copy; 2016 MAshraf. All rights reserved.
 
-		script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js")
-		script(src="/javascripts/bootstrap.min.js")
-
+      script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js")

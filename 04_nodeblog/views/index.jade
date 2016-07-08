@@ -1,5 +1,15 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  if posts
+    each post, i in posts
+      .post
+        h1
+          a(href='posts/show/#{post._id}')
+            =post.title
+        p.meta Posted in #{post.category} on #{moment(post.date).format("MM-DD-YYYY")}
+        .body
+          !=post.body
+        a.more(href='posts/show/#{post._id}') Read More
+  else
+    p.no-post No Posts to Display Yet! Start Writing!
