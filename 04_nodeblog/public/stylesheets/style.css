@@ -108,10 +108,11 @@ a.more{
   position: relative;
 }
 .post .body{
+  width: 738px;
   padding: 5px;
   line-height: 21px;
   border: 1px solid #eee;
-  margin-top: 0px;
+  margin-top: -4px;
   margin-bottom: 5px;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -181,4 +182,63 @@ ul.success li{
   background-color: #dff0d8;
   border-color: #d9e9c6;
   list-style: none;
+}
+
+img.thumb{
+  width: 100%
+}
+
+span.tag {
+    background-color: #53a700;
+    border-radius: 6px;
+    padding: 1px;
+    font-weight: bold;
+}
+span.tag a{
+  color: white;
+}
+
+.comments {
+    margin-top: 25px;
+}
+
+.comments input.btn.btn-default {
+    width: 122px;
+}
+
+.box {
+    position:relative;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: rgb(249, 255, 195);
+    border: 1px solid #ccc;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.group{
+  width: 100%;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+.group label {
+    float: left;
+    width: 100px;
+    height: 100%;
+    font-weight: bold;
+    display: inline-table;
+}
+
+.group .body{
+  width: 100%;
+}
+
+.comments .meta {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    font-size: 8px;
+    color: black;
+    background-color: transparent;
+    border: 0;
 }

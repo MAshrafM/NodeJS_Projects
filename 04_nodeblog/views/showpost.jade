@@ -1,0 +1,45 @@
+extends layout
+
+block content
+  .post
+    h1
+      =post.title
+    p.meta Posted in 
+      span.tag
+        a(href='/categories/show/#{post.category}') &nbsp; #{ post.category } &nbsp;
+      span &nbsp; on #{moment(post.date).format("MM-DD-YYYY")}
+    img.thumb(src='/images/uploads/#{post.thumbimage}')
+    .body
+      !=post.body
+  .comments
+    if errors
+      ul.errors
+        each error, i in errors
+          li.alert.alert-danger #{error.msg}
+    form.comment-form(method='post', action='/posts/addcomment')
+      input(name='postid', type='hidden', value='#{post._id}')
+      .form-group
+        label Name
+        input.form-control(type='text', name='name')
+      .form-group
+        label Title
+        input.form-control(type='text', name='title')
+      .form-group
+        label Body
+        textarea.form-control(name='body', id='body')
+      input.btn.btn-default(name='submit', type='submit', value='Submit Comment')
+    <hr />
+    if post.comments
+      h3 (#{post.comments.length}) Comments
+      each comment, i in post.comments
+        .box
+          .group
+            label Title: 
+            p.title #{comment.title}
+          .group
+            label Comment: 
+            p.body #{comment.body}
+          .meta
+            p By #{comment.name} on #{moment(comment.date).format("hh:mm:ss MM-DD-YYYY")}
+      
+      
