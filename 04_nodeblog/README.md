@@ -9,7 +9,7 @@
 - Custome Style for the Application
 
 Final Show Case
-![VIEWS](https://github.com/MAshrafM/NodeJS_Projects/04_nodeblog/blob/master/show.jpg)
+![VIEWS](https://github.com/MAshrafM/NodeJS_Projects/blob/master/04_nodeblog/show.jpg)
 
 ### Future
 - Adding passport from the previous project.
