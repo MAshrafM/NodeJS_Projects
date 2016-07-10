@@ -1,3 +1,4 @@
+@font-face{font-family:'Glyphicons Halflings';src:url(../fonts/glyphicons-halflings-regular.eot);src:url(../fonts/glyphicons-halflings-regular.eot?#iefix) format('embedded-opentype'),url(../fonts/glyphicons-halflings-regular.woff2) format('woff2'),url(../fonts/glyphicons-halflings-regular.woff) format('woff'),url(../fonts/glyphicons-halflings-regular.ttf) format('truetype'),url(../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format('svg')}.glyphicon{position:relative;top:1px;display:inline-block;font-family:'Glyphicons Halflings';font-style:normal;font-weight:400;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.glyphicon-pencil:before{content:"\270f"}.glyphicon-trash:before{content:"\e020"}
 html, body{
 	height: 100%;
   margin: 0;
@@ -92,16 +93,20 @@ nav a.active, nav a:hover{
   background: #ccc;
 }
 
-a.more{
+a.more, a.btn{
   display: inline-block;
   background: #404137;
   color: white;
   padding: 10px;
+}
+a.more{
   position:absolute;
   bottom: 5px;
   right: 0px;
 }
-
+a.btn{
+  margin-right: 2px;
+}
 .post{
   border-bottom: 1px solid #ccc;
   padding-bottom: 40px;
@@ -118,6 +123,11 @@ a.more{
   border-bottom-right-radius: 15px;
   background-color: #fdfdfd;
 }
+
+form {
+    margin-top: 25px;
+}
+
 input, select, textarea{
   margin-bottom: 15px;
 }
@@ -242,3 +252,10 @@ span.tag a{
     background-color: transparent;
     border: 0;
 }
+
+.pull-right{
+  clear:both;
+  content: '';
+  float: right;
+}
+

@@ -34,6 +34,22 @@ router.get('/show/:id', function(req, res, next){
   });
 });
 
+router.get('/edit/:id', function(req, res, next){
+  var posts = db.get('posts');
+  var categories = db.get('categories');
+  var id = new ObjectID(req.params.id);
+  categories.find({}, {}, function(err, categories){
+    posts.findOne({"_id": id}, {}, function(err, post){
+      if(err) throw err;
+      res.render('editpost', {
+        "title": post.title,
+        "post": post,
+        "categories": categories
+      });
+    });
+  });
+});
+
 router.get('/add', function(req, res, next){
   var categories = db.get('categories');
   categories.find({}, {}, function(err, categories){
@@ -100,7 +116,6 @@ router.post('/add', [upload.single('thumbimage'), function(req, res, next){
       body = req.body.body;
   var date = new Date();
   
-  console.log(req.file);
   if(req.file){
     var thumbImageOName = req.file.originalname,
         thumbImageName = req.file.filename,
@@ -151,5 +166,82 @@ router.post('/add', [upload.single('thumbimage'), function(req, res, next){
     });
   }
 }]);
+
+router.post('/edit', [upload.single('thumbimage'), function(req, res, next){
+  // get form values
+  var title = req.body.title,
+      category = req.body.category,
+      body = req.body.body,
+      postId = req.body.postId,
+      prevImage = req.body.previmage;
+  var date = new Date();
+  var posts = db.get('posts');
+  var categories = db.get('categories');
+  var id = new ObjectID(postId);
+  
+  
+  if(req.file){
+    var thumbImageOName = req.file.originalname,
+        thumbImageName = req.file.filename,
+        thumbImageMime = req.file.mimetype,
+        thumbImagePath = req.file.path,
+        thumbImageExt = thumbImageMime.split('/')[1],
+        thumbImageSize = req.file.size;
+  }
+  else{
+    var thumbImageName = prevImage;
+  }
+  
+  // Validattion
+  req.checkBody('title', 'Title Field is required').notEmpty();
+	req.checkBody('body', 'Body Field is required').notEmpty();
+  
+  // check errors
+  var errors = req.validationErrors();
+  
+  if(errors){
+    categories.find({}, {}, function(err, categories){
+      posts.findOne({"_id": id}, {}, function(err, post){
+        if(err) throw err;
+        res.render('editpost', {
+          "errors": errors,
+          "title": post.title,
+          "post": post,
+          "categories": categories
+        });
+      });
+    });
+  }
+  else{
+    posts.update({"_id": id},
+    {
+      "title": title,
+      "body": body,
+      "category": category,
+      "date": date,
+      "thumbimage": thumbImageName
+    }, function(err, post){
+      if(err) {
+        res.send("There was an issue Editing the post");
+      }
+      else{
+        req.flash('success', 'Post Edited');
+        res.location('/posts/show/'+postId);
+        res.redirect('/posts/show/'+postId);
+      }
+    });
+  }
+}]);
+
+router.get('/delete/:id', function(req, res, next){
+  var posts = db.get('posts');
+  var id = new ObjectID(req.params.id);
+  posts.remove({"_id": id}, function(err, post){
+    if(err) throw err;
+    req.flash('success', 'Post Deleted');
+    res.location('/');
+    res.redirect('/');
+  });
+});
 
 module.exports = router;

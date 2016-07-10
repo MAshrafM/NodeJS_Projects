@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  if errors
+    ul.errors
+      each error, i in errors
+        li.alert-danger #{error.msg}
+  
+  form(method='post', action='/posts/edit', enctype='multipart/form-data')
+    input.form-control(name='postId', type='hidden', value='#{post._id}')
+    input.form-control(name='previmage', type='hidden', value='#{post.thumbimage}')
+    .form-group
+      label Title:
+      input.form-control(name='title', type='text', value='#{post.title}')
+    .form-group
+      label Category
+      select.form-control(name='category')
+        each category, i in categories
+          option(value='#{category.title}', selected=(category.title === post.category)? 'selected' : '') #{category.title}
+    .form-group
+      label Body:
+      textarea.form-control(name='body', id='body') #{post.body}
+    .form-group
+      label Thumbnail Image
+      input.form-control(name='thumbimage', type='file')
+    input.btn.btn-default(name='submit', value='Save', type='submit')
+      
+    script(src='/ckeditor/ckeditor.js')
+    script
+      | CKEDITOR.replace('body')

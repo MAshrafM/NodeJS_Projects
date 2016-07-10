@@ -10,7 +10,12 @@ block content
       span &nbsp; on #{moment(post.date).format("MM-DD-YYYY")}
     img.thumb(src='/images/uploads/#{post.thumbimage}')
     .body
-      !=post.body
+      !=post.body 
+    div.btn-group.pull-right
+      a.btn(href='/posts/delete/#{post._id}', data-confirm="Are you sure?") Destroy &nbsp;
+        span.glyphicon.glyphicon-trash
+      a.btn(href='/posts/edit/#{post._id}') Edit &nbsp;
+        span.glyphicon.glyphicon-pencil
   .comments
     if errors
       ul.errors
