@@ -1,0 +1,49 @@
+{
+  "name": "dustjs-helpers",
+  "version": "1.6.3",
+  "homepage": "https://github.com/linkedin/dustjs-helpers",
+  "authors": [
+    "Veena Basavaraj <vybs@users.noreply.github.com>",
+    "Yevgeniy Brikman <brikis98@users.noreply.github.com>",
+    "Sarah Clatterbuck <sclatter@linkedin.com>",
+    "Jimmy Chan <jchan@linkedin.com>",
+    "Steven Foote <sfoote@linkedin.com>",
+    "Johnathan Leppert <jleppert@users.noreply.github.com>",
+    "Prayrit Prash Jain <prjain@linkedin.com>",
+    "Seth Kinast <skinast@linkedin.com>",
+    "Jairo de Morais <jairodemorais@users.noreply.github.com>",
+    "Kate Odnous <kodnous@linkedin.com>",
+    "Richard Ragan <rragan@ebay.com>",
+    "Aleksander Williams (http://akdubya.github.com/dustjs)"
+  ],
+  "description": "core helpers for Dust.js",
+  "main": "dist/dust-helpers.min.js",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "dependencies": {
+    "dustjs-linkedin": "2.6 - 2.7"
+  },
+  "keywords": [
+    "templates",
+    "views",
+    "helpers",
+    "dust",
+    "dustjs",
+    "dust.js",
+    "linkedin"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tmp",
+    "lib",
+    "gruntfile.js",
+    "package.json"
+  ]
+}

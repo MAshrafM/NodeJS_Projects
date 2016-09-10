@@ -1,0 +1,61 @@
+{
+  "name": "dustjs-linkedin",
+  "version": "2.6.3",
+  "homepage": "https://github.com/linkedin/dustjs",
+  "authors": [
+    "Veena Basavaraj <vybs@users.noreply.github.com>",
+    "Tom Carchrae",
+    "Jimmy Chan <jchan@linkedin.com>",
+    "Steven Foote <sfoote@linkedin.com>",
+    "Prayrit Prash Jain <prjain@linkedin.com>",
+    "Seth Kinast <skinast@linkedin.com>",
+    "Jairo de Morais <jairodemorais@users.noreply.github.com>",
+    "Kate Odnous <kodnous@linkedin.com>",
+    "Richard Ragan <rragan@ebay.com>",
+    "Aleksander Williams (http://akdubya.github.com/dustjs)"
+  ],
+  "description": "asynchronous Javascript templating for the browser and server",
+  "main": "dist/dust-full.min.js",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "templates",
+    "views",
+    "dust",
+    "dustjs",
+    "dust.js",
+    "linkedin"
+  ],
+  "devDependencies": {
+    "pegjs": "0.8.0"
+  },
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "benchmark",
+    "bin",
+    "docs",
+    "examples",
+    "lib",
+    "node_modules",
+    "src",
+    "test",
+    "tmp",
+    "index.js",
+    "Gruntfile.js",
+    "package.json"
+  ],
+  "_release": "2.6.3",
+  "_resolution": {
+    "type": "version",
+    "tag": "v2.6.3",
+    "commit": "218a49d0236e404215a46485fc24d8ecb8325c6b"
+  },
+  "_source": "https://github.com/linkedin/dustjs.git",
+  "_target": "~2.6.1",
+  "_originalSource": "dustjs-linkedin",
+  "_direct": true
+}

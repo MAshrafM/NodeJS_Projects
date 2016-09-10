@@ -1,0 +1,23 @@
+{
+  "name": "06-tekbooks",
+  "description": "Shopping Cart Simple App",
+  "main": "index.js",
+  "author": "MAshraf",
+  "moduleType": [
+    "amd"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "dustjs-linkedin": "~2.6.1",
+    "dustjs-helpers": "dustjs-linkedin-helpers#~1.6.1",
+    "requirejs": "^2.1.16"
+  }
+}

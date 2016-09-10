@@ -1,0 +1,46 @@
+{
+  "name": "06-tekbooks",
+  "version": "0.1.0",
+  "description": "Shopping Cart Simple App",
+  "author": "MAshraf",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt test",
+    "build": "grunt build",
+    "all": "npm run build && npm run test"
+  },
+  "dependencies": {
+    "adaro": "^0.1.10",
+    "connect-flash": "^0.1.1",
+    "construx": "^1.0.0",
+    "construx-copier": "^1.0.0",
+    "construx-dustjs-i18n": "^1.0.1",
+    "construx-less": "^1.0.0",
+    "dustjs-helpers": "~1.6.3",
+    "dustjs-linkedin": "~2.6.3",
+    "engine-munger": "^0.2.9",
+    "eslint": "^1.10.3",
+    "express": "^4.12.2",
+    "express-messages": "^1.0.1",
+    "kraken-js": "^2.0.0",
+    "localizr": "^0.1.6",
+    "mongodb": "^2.2.9",
+    "mongoose": "^4.6.0",
+    "requirejs": "^2.3.1"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-config-dir": "^0.3.2",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-less": "^1.4.0",
+    "grunt-contrib-requirejs": "^0.4.4",
+    "grunt-copy-to": "0.0.10",
+    "grunt-dustjs": "^1.4.0",
+    "grunt-eslint": "^17.3.2",
+    "grunt-localizr": "^0.2.4",
+    "grunt-mocha-cli": "^1.14.0",
+    "mocha": "^1.18.0",
+    "supertest": "^0.9.0"
+  }
+}
