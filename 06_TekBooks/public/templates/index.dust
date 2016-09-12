@@ -1,5 +1,21 @@
 {>"layouts/master" /}
 
 {<body}
-    <h1>{@pre type="content" key="greeting"/}</h1>
+  {#books}
+    <div class="large-3 columns book">
+    <img src="/img/{.cover}" alt="Game of Thrones" />
+    <h4>{.title}</h4>
+    <p>
+    {.truncText}
+    ...
+    </p>
+    <div class="price">
+      Buy it for <span>${.price}</span>
+    </div>
+    <br />
+    <a href="/books/details/{._id}" class="button">Book Details</a>
+  </div>
+  {/books}
+  
+
 {/body}

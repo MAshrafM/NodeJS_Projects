@@ -40,6 +40,28 @@
 
     "middleware": {
 
+        "appsec":{
+          "module":{
+            "arguments":[
+            {
+              "xframe": "SAMEORIGIN",
+              "p3p": false,
+              "csp": false
+            }
+            ]
+          }
+        },
+        
+        "csrf":{
+          "enabled": true,
+          "priority": 111,
+          "route": "/((?!manage))*",
+          "module":{
+            "name": "lusca",
+            "method": "csrf",
+            "arguments": [{}]
+          }
+        },
         
         "expressView": {
             "priority": 100,

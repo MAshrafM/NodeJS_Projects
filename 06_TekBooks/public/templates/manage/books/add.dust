@@ -1,0 +1,69 @@
+{> "layouts/manage" /}
+
+{<body}
+  <div class="row">
+    <div class="large-12 columns">
+      <form method="post" action="/manage/books">
+        <div class="row">
+          <div class="large-12 columns">
+            <label>Title
+            <input name="title" type="text" />
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-12 columns">
+            <label>Author
+            <input name="author" type="text" />
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-12 columns">
+            <label>Publisher
+            <input name="publisher" type="text" />
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-12 columns">
+            <label>Price
+            <input name="price" type="text" />
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-12 columns">
+            <label>Categories
+            <select name="category">
+              {#categories}
+                <option value="{.name}">{.name}</option>
+              {/categories}
+            </select>
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-12 columns">
+            <label>Description
+            <textarea name="description"></textarea>
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-12 columns">
+            <label>Cover Url
+            <input name="cover" type="text" />
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-12 columns">
+            <input type="submit" class="button" value="Submit" />
+          </div>
+        </div>
+        <input type="hidden" name="_csrf" value="{_csrf}" />
+      </form>
+    </div>
+  </div>
+{/body}

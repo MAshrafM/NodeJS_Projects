@@ -1,0 +1,23 @@
+{> "layouts/manage" /}
+
+{<body}
+  <div class="row">
+    <div class="large-12 columns">
+      <form method="post" action="/manage/categories">
+        <div class="row">
+          <div class="large-12 columns">
+            <label>Name
+            <input name="name" type="text" />
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-12 columns">
+            <input type="submit" class="button" value="Submit" />
+          </div>
+        </div>
+        <input type="hidden" name="_csrf" value="{_csrf}" />
+      </form>
+    </div>
+  </div>
+{/body}
