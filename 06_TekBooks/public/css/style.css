@@ -62,3 +62,7 @@ ul.success li{
   background-color: #dff0f8;
   border-color: #d6e9c6;
 }
+
+h2 span{
+  font-size: 18px;
+}

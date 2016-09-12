@@ -55,7 +55,7 @@
         "csrf":{
           "enabled": true,
           "priority": 111,
-          "route": "/((?!manage))*",
+          "route": "/((?!manage)|(?!cart))*",
           "module":{
             "name": "lusca",
             "method": "csrf",

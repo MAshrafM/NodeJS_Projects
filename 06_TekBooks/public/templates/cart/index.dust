@@ -1,0 +1,55 @@
+{>"layouts/master" /}
+{<title}
+  Your Cart
+{/title}
+
+{<body}
+  <div class="row">
+    <div class="large-12 columns">
+      <h2>Your Shopping Cart <span><a href="/cart/remove">Empty Cart</a></span></h2>
+      {?cart.items}
+        <table>
+          <thead>
+            <tr>
+              <th width="650">Items</th>
+              <th width="100">Quantity</th>
+              <th width="100">Total</th>
+              <th width="100"></th>
+              </tr>
+              
+          </thead>
+          <tbody>
+            {#cart.items}
+              <tr>
+                <td><a href="/books/details/{._id}">{.title}</a></td>
+                <td>{.qty}</td>
+                <td>${@math key="{.price}" method="multiply" operand="{.qty}" /}</td>
+              </tr>
+            {/cart.items}
+          </tbody>
+        </table>
+        <div class="row">
+          <div class="large-6 columns">
+            <h4>Total: <strong>${cart.total}</strong></h4>
+          </div>
+          <div class="large-6 columns">
+          
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+              <input type="hidden" name="cmd" value="_cart">
+              <input type="hidden" name="business" value="seller@designerfotos.com">
+              <input type="hidden" name="item_name" value="TekBooks">
+              <input type="hidden" name="item_number" value="1">
+              <input type="hidden" name="amount" value="{cart.total}">
+
+              <input type="image" name="submit"
+                src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif"
+                alt="PayPal - The safer, easier way to pay online">
+            </form>
+          </div>          
+        </div>
+        {:else}
+        <p>There is No Items in Your Cart!</p>
+      {/cart.items}
+    </div>
+  </div>
+{/body}
