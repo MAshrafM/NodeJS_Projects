@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ChatIO</title>
+    <link href="../css/style.css" rel="stylesheet">
+  </head>
+  
+  <body>
+    <div class="container">
+      <div id="namesWrapper">
+        <h2>ChatIO</h2>
+        <p>Create Username:</p>
+        <div id="error"></div>
+        <form id="usernameForm">
+          <input type="text" name="username" size="35" id="username"/>
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+      
+      <div id="mainWrapper">
+        <h2>ChatIO</h2>
+        <div id="chatWrapper">
+          <div id="chatWindow">
+          </div>
+          <form id="messageForm">
+            <input type="text" name="message" size="35" id="message" placeholder="Type Something..."/>
+            <input type="submit" value="Say it!" />
+          </form>
+        </div>
+        <div id="userWrapper">
+          <div id="users"></div>
+          
+        </div>
+      </div>
+    </div>
+    
+    <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>
