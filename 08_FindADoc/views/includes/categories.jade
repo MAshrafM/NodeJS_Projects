@@ -1,0 +1,5 @@
+h2 Categories:
+ul
+each category, i in cats
+  li
+    a(href='/doctors/category/#{category.name}') #{category.name}

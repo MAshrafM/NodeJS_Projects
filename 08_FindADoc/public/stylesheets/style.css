@@ -1,0 +1,192 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+background: #fff;
+font-family: "Trebuchet MS" Verdana, Arial, Helvetica, sans-serif;
+font-size: 12px;
+line-height: 17px;
+color: #333;
+}
+
+a {
+text-decoration: none;
+color: #336699;
+}
+a:hover {
+text-decoration: underline;
+color: #111;
+}
+
+#wrap {
+margin: 0 auto;
+width: 780px;
+}
+
+#header {
+height: 90px;
+}
+
+#header h1 {
+font-size: 28px;
+letter-spacing: -1px;
+padding: 23px 0 0 20px;
+color: #3069AE;
+}
+
+#header h1 a {
+color: #3069AE;
+text-decoration: none;
+font-weight: 100;
+letter-spacing: -2px;
+}
+
+#header h1 a:hover {
+color: #111;
+}
+
+#header h2 {
+font-size: 19px;
+color: #DA0000;
+padding: 5px 0 0 20px;
+letter-spacing: -1px;
+font-weight: 100;
+}
+
+#menu {
+height: 30px;
+line-height: 30px;
+background: #3069AE url(images/menu.jpg) no-repeat;
+}
+
+#menu ul {
+list-style-type: none;
+padding-left: 20px;
+}
+
+#menu ul li {
+display: block;
+float: left;
+}
+
+#menu ul li a {
+padding: 0 20px 0 0;
+text-decoration: none;
+font-weight: 100;
+font-size: 14px;
+color: #fff;
+}
+
+#menu ul li a:hover {
+color: #fff;
+text-decoration: underline;
+}
+
+#content {
+padding: 0 20px 20px 20px;
+}
+
+.left {
+float: left;
+width: 550px;
+text-align: justify;
+padding-top: 10px;
+}
+
+.left h2 {
+font-size: 18px;
+font-weight: 100;
+padding: 15px 0 7px 0;
+}
+
+.left h2 a {
+text-decoration: none;
+}
+
+.left h2 a:hover {
+color: #111;
+}
+
+
+.right {
+float: right;
+width: 160px;
+padding-top: 15px;
+}
+
+.right h2 {
+margin: 10px 0 0 0;
+padding-left: 10px;
+height: 24px;
+line-height: 24px;
+background: #3F7AC6;
+color: #fff;
+font-size: 13px;
+}
+
+.right ul {
+padding: 10px 0 15px 10px;
+list-style-type: none;
+}
+
+.right ul li a {
+color: #336699;
+text-decoration: none;
+font-size: 12px;
+font-weight: 100;
+}
+
+.right ul li a:hover {
+color: #111;
+}
+
+#footer {
+height: 30px;
+line-height: 30px;
+background: #D1E6EF url(images/footer.jpg) no-repeat;
+text-align: center;
+font-size: 11px;
+color: #fff;
+}
+
+#footer a { color: #fff; }
+
+ul.docs li{
+	float: left;
+	list-style: none;
+	width: 50%;
+	margin-bottom: 20px;
+}
+
+.details-left{
+	width:30%;
+	float:left;
+}
+
+.details-right{
+	width: 60%;
+	float:right;
+}
+
+.doc-info li, .practice-info li{
+	line-height: 2em;
+	list-style: none;
+	border-bottom: 1px #ccc solid;
+}
+
+.details-right h4{
+	padding:5px;
+	margin:10px 0;
+	background: #f4f4f4;
+}
+
+label{
+	display: inline-block;
+	width: 100px;
+}
+
+form div{
+	margin:10px 0;
+}

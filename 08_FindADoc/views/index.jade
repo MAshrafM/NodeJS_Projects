@@ -1,0 +1,113 @@
+extends layout
+
+block content
+  h2 Welcome to Find a Doctor!
+    p We will help you find a doctor in your area
+    br
+    form(method='get' action='/doctors')
+      select(name='state')
+        option(value="0") Select a State
+        | &#x9;
+        option(value="AL") Alabama
+        | &#x9;
+        option(value="AK") Alaska
+        | &#x9;
+        option(value="AZ") Arizona
+        | &#x9;
+        option(value="AR") Arkansas
+        | &#x9;
+        option(value="CA") California
+        | &#x9;
+        option(value="CO") Colorado
+        | &#x9;
+        option(value="CT") Connecticut
+        | &#x9;
+        option(value="DE") Delaware
+        | &#x9;
+        option(value="DC") District Of Columbia
+        | &#x9;
+        option(value="FL") Florida
+        | &#x9;
+        option(value="GA") Georgia
+        | &#x9;
+        option(value="HI") Hawaii
+        | &#x9;
+        option(value="ID") Idaho
+        | &#x9;
+        option(value="IL") Illinoi
+        | &#x9;
+        option(value="IN") Indiana
+        | &#x9;
+        option(value="IA") Iowa
+        | &#x9;
+        option(value="KS") Kansas
+        | &#x9;
+        option(value="KY") Kentucky
+        | &#x9;
+        option(value="LA") Louisiana
+        | &#x9;
+        option(value="ME") Maine
+        | &#x9;
+        option(value="MD") Maryland
+        | &#x9;
+        option(value="MA") Massachusetts
+        | &#x9;
+        option(value="MI") Michigan
+        | &#x9;
+        option(value="MN") Minnesota
+        | &#x9;
+        option(value="MS") Mississippi
+        | &#x9;
+        option(value="MO") Missouri
+        | &#x9;
+        option(value="MT") Montana
+        | &#x9;
+        option(value="NE") Nebraska
+        | &#x9;
+        option(value="NV") Nevada
+        | &#x9;
+        option(value="NH") New Hampshire
+        | &#x9;
+        option(value="NJ") New Jersey
+        | &#x9;
+        option(value="NM") New Mexico
+        | &#x9;
+        option(value="NY") New York
+        | &#x9;
+        option(value="NC") North Carolina
+        | &#x9;
+        option(value="ND") North Dakota
+        | &#x9;
+        option(value="OH") Ohio
+        | &#x9;
+        option(value="OK") Oklahoma
+        | &#x9;
+        option(value="OR") Oregon
+        | &#x9;
+        option(value="PA") Pennsylvania
+        | &#x9;
+        option(value="RI") Rhode Island
+        | &#x9;
+        option(value="SC") South Carolina
+        | &#x9;
+        option(value="SD") South Dakota
+        | &#x9;
+        option(value="TN") Tennessee
+        | &#x9;
+        option(value="TX") Texas
+        | &#x9;
+        option(value="UT") Utah
+        | &#x9;
+        option(value="VT") Vermont
+        | &#x9;
+        option(value="VA") Virginia
+        | &#x9;
+        option(value="WA") Washington
+        | &#x9;
+        option(value="WV") West Virginia
+        | &#x9;
+        option(value="WI") Wisconsin
+        | &#x9;
+        option(value="WY") Wyoming
+        | &#x9;
+      input(type="submit", value="Find")

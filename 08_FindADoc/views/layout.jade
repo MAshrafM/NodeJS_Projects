@@ -1,0 +1,39 @@
+doctype html
+html
+  head
+    title= title
+    meta(http-equiv='Content-Language', content='English')
+    meta(http-equiv='Content-Type', content='text/html', charset=UTF-8)
+    link(rel='stylesheet', type='text/css', href='/stylesheets/style.css', media='screen')
+    script(src="https://code.jquery.com/jquery-2.2.4.min.js")
+  body
+    #wrap
+      #header
+        h1
+          a(href='#') Find a Doctor
+        h2 Search for local doctors
+      
+      #menu
+        ul
+          li
+            a(href='/') Home
+          li
+            a(href='/doctors') Browse Doctors
+          li
+            a(href='/doctors/add') Add Doctor
+          li
+            a(href='/categories/add') Add Category
+      #content
+        .left
+          !=messages()
+          block content
+                
+        .right
+          include ./includes/categories.jade
+        div(style='clear: both;')
+                    
+      #footer
+        | Designed by 
+        a(href='#') Free CSS Templates
+        | , Thansk to 
+        a(href='#') Custom Web Design

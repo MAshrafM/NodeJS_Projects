@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  form(method='post' action='/categories/add' class='addForm')
+    h3 Add Category
+    br
+    div
+      label Category Name:
+      input(type='text', name='name')
+      br
+    div
+      input(type='submit' value='Add Category')
