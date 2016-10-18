@@ -1,0 +1,22 @@
+extends layout2
+
+block content
+  h2 Dashboard
+  br
+  br
+  table.table.table-stiped
+    tr
+      th ID
+      th Project Name
+      th Service
+      th 
+      th
+    each row, i in rows
+      tr
+        td #{row.id}
+        td #{row.title}
+        td #{row.services}
+        td
+          a.btn.btn-primary(href='/admin/edit/#{row.id}') Edit
+        td
+          a.btn.btn-danger(href='#' class='deleteProject' data-id='#{row.id}') Delete
