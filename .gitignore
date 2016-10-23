@@ -7,3 +7,5 @@
 */*.min.css
 */config.js
 */.nodemonignore
+
+*/public/images
