@@ -1,0 +1,66 @@
+<h2>Create An Account</h2>
+<form id="regForm" method="post" action="/users/signup">
+
+  <div>
+    <label>Account Type</label>
+    <select name="type">
+      <option value="student">Student</option>
+      <option value="instructor">instructor</option>
+    </select>
+  </div>
+
+  <div>
+    <label>First Name:</label>
+    <input type="text" name="first_name" value="{{first_name}}">
+  </div>
+
+  <div>
+    <label>Last Name:</label>
+    <input type="text" name="last_name" value="{{last_name}}">
+  </div>
+
+  <div>
+    <label>Street Address:</label>
+    <input type="text" name="street_address" value="{{street_address}}">
+  </div>
+
+  <div>
+    <label>City:</label>
+    <input type="text" name="city" value="{{city}}">
+  </div>
+
+  <div>
+    <label>State:</label>
+    <input type="text" name="state" value="{{state}}">
+  </div>
+
+  <div>
+    <label>Zip:</label>
+    <input type="text" name="zip" value="{{zip}}">
+  </div>
+
+  <div>
+    <label>Email Address:</label>
+    <input type="text" name="email" value="{{email}}">
+  </div>
+
+  <div>
+    <label>Username:</label>
+    <input type="text" name="username" value="{{username}}">
+  </div>
+
+  <div>
+    <label>Password:</label>
+    <input type="password" name="password" value="{{password}}">
+  </div>
+
+  <div>
+    <label>Password Confirm:</label>
+    <input type="password" name="password2" value="{{password2}}">
+  </div>
+
+  <div>
+    <input type="submit" value="Signup">
+  </div>
+  
+</form>
